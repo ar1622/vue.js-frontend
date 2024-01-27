@@ -201,7 +201,7 @@
                                             <button
                                                 type="submit"
                                                 class="btn btn-primary ms-4 px-5"
-                                                 data-bs-dismiss="modal"
+                                                data-bs-dismiss="modal"
                                             >
                                                 Update
                                             </button>
@@ -262,7 +262,7 @@ export default {
         async updateLessonDetails(lessonId) {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/lesson/update/${lessonId}`,
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/lesson/update/${lessonId}`,
                     {
                         method: "PUT",
                         headers: {

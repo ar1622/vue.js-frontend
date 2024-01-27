@@ -336,7 +336,7 @@ export default {
             };
             try {
                 const response = await fetch(
-                    `http://localhost:5000/order/update/${orderId}`,
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/order/update/${orderId}`,
                     {
                         method: "PUT",
                         headers: {
@@ -346,9 +346,7 @@ export default {
                     }
                 );
 
-
                 if (response.ok) {
-        
                     this.$store.dispatch("fetchOrders");
                     alert("Order updated successfully!");
                 } else {

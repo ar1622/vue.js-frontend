@@ -295,7 +295,7 @@ export default {
         async updateLessonDetails(lessonId) {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/lesson/update/${lessonId}`,
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/lesson/update/${lessonId}`,
                     {
                         method: "PUT",
                         headers: {

@@ -37,7 +37,7 @@ const store = createStore({
         async fetchLessonsBasedOnQuery({ commit }, searchQuery) {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/search?search=${searchQuery}`
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/search?search=${searchQuery}`
                 );
                 const data = await response.json();
 
@@ -48,7 +48,7 @@ const store = createStore({
         },
         async fetchLessons({ commit }) {
             try {
-                const response = await fetch("http://localhost:5000/lesson");
+                const response = await fetch("http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/lesson");
                 const data = await response.json();
 
                 commit("setLessons", data.body);
@@ -66,7 +66,7 @@ const store = createStore({
                 }
 
                 const response = await fetch(
-                    `http://localhost:5000/lesson/delete/${lessonId}`,
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/lesson/delete/${lessonId}`,
                     {
                         method: "DELETE",
                     }
@@ -100,7 +100,7 @@ const store = createStore({
             try {
                 // Assuming you have a proper endpoint for saving order details
                 const response = await fetch(
-                    "http://localhost:5000/order/save-order-details",
+                    "http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/order/save-order-details",
                     {
                         method: "POST",
                         headers: {
@@ -127,7 +127,7 @@ const store = createStore({
 
         async fetchOrders({ commit }) {
             try {
-                const response = await fetch("http://localhost:5000/order/");
+                const response = await fetch("http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/order/");
                 const data = await response.json();
 
                 commit("setOrders", data.body);
@@ -145,7 +145,7 @@ const store = createStore({
                 }
 
                 const response = await fetch(
-                    `http://localhost:5000/order/delete/${orderId}`,
+                    `http://webserver-env.eba-jrmuymp5.eu-west-2.elasticbeanstalk.com/order/delete/${orderId}`,
                     {
                         method: "DELETE",
                     }
